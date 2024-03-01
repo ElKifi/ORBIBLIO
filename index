@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector de EPUB</title>
+    <script src="lib/epub.min.js"></script>
+</head>
+<body>
+    <h1>Lector de EPUB</h1>
+    <div id="viewer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var book = ePub("libro.epub"); // Reemplaza con el nombre de tu archivo EPUB
+
+            book.renderTo("viewer", {
+                width: "100%",
+                height: "100%",
+            });
+
+            // Puedes agregar más funcionalidades aquí según las necesidades
+
+            book.load();
+        });
+    </script>
+</body>
+</html>
